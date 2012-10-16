@@ -1,0 +1,63 @@
+#!/bin/sh
+
+set -e
+
+# Automatically added by dh_installmenu
+if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+
+# End automatically added section
+# Automatically added by dh_gconf
+if [ "$1" = "configure" ]; then
+	gconf-schemas --register ocara-server.schemas 
+fi
+
+# End automatically added section
+# Automatically added by dh_gconf
+if [ "$1" = "configure" ]; then
+	gconf-schemas --register ocara-client.schemas 
+fi
+# End automatically added section
+
+
+#1 - Verificar a existencia de uma base ocara no mysql
+#2 - Caso exista:
+#3 -     Gerar o dump da base mysql
+#4 -     Utilizar o my2pg para converter a base mysql para postgres
+#5 -     Inserir no postgres
+#6 - Se não existir:
+#7 -    Verificar a existencia de uma base ocara no postgres
+#8 -    Caso exista:
+#9 -       Verificar mudanças na base e utilizar Alter column para cada tabela mudada
+#10 -   Se não existir:
+#11 -      Criar
+
+
+#INICIO
+#/etc/init.d/mysql restart
+#saida=$(mysql -u root -p*Lib10DaDe* -e "show databases;" | grep ocara)
+#if ["$saida" = "ocara"]; then
+#       mysqldump -u root -p12345678 ocara > ocara_dump.sql
+#fi
+
+/etc/init.d/postgresql-8.3 start
+saidap=$(echo '\x \\ \l \q' | sudo -u postgres psql | grep ocara |awk '{print $3}' | uniq)
+if [ "$saidap" != "ocara" ]; then
+      #Para criar base e usuario no postgres
+      #echo '\x \\ DROP DATABASE ocara; \q' | sudo -u postgres psql
+      #echo '\x \\ DROP ROLE ocara; \q' | sudo -u postgres psql
+      echo '\x \\ CREATE ROLE ocara; \q' | sudo -u postgres psql
+      echo '\x \\ ALTER ROLE ocara WITH SUPERUSER INHERIT NOCREATEROLE CREATEDB LOGIN PASSWORD '\'liberdade\'' ;' | sudo -u postgres psql
+      #echo '\x \\ DROP DATABASE ocara; \q' | sudo -u postgres psql
+      echo '\x \\ CREATE DATABASE ocara WITH TEMPLATE = template1 OWNER = ocara; \q' | sudo -u postgres psql
+      #FIM
+      sudo -u postgres psql -f /tmp/criaTabelas.sql ocara
+ 
+#else
+      #Verificar mudanças na base e utilizar Alter column para cada tabela mudada
+      #echo 'existe base ocara'
+
+fi
+
+exit 0

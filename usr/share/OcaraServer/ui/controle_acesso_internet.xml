@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY appversion "1.0">
+<!ENTITY manrevision "1.0">
+<!ENTITY app "Controle de acesso a internet">
+]>
+<!-- 
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<article id="index" lang="pt_BR">
+
+  <articleinfo> 
+    <title>Manual do Controle de acesso à Internet</title> 
+      
+    <abstract role="description"><para>O controle de acesso à internet é uma aplicação que permiti ou nega acesso a informações em redes de computadores, através do conteúdo de sua informação.</para>
+    </abstract>
+
+    <publisher> 
+      <publishername>Projeto de Inclusão Digital do BB</publishername> 
+    </publisher> 
+
+   <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Pedro</firstname> 
+	<surname>Assis</surname> 
+	<affiliation> 
+	  <orgname>Projeto de Inclusão digital do BB</orgname>
+	  <address><email>pedrocarlos.assis@gmail.com</email></address>
+	</affiliation>
+      </author> 
+      <author> 
+        <firstname>BB</firstname> 
+        <surname>Projeto de Inclusão digital do BB</surname> 
+        <affiliation> 
+          <orgname>Banco do Brasil</orgname> 
+        </affiliation> 
+       </author> 
+    </authorgroup>
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->  
+    <revhistory>
+        <revision> 
+		<revnumber>Manual do Controle de acesso à internet 1.0</revnumber> 
+		<date>26 de agosto de 2011</date>
+		<revdescription> 
+	  		<para role="author">Pedro Carlos</para>
+	  		<para role="publisher">Projeto de Inclusão Digital do BB</para>
+		</revdescription> 
+        </revision>
+    </revhistory> 
+
+    <releaseinfo>Este manual descreve a versão 1.0 do Controle de acesso à Internet.</releaseinfo> 
+    <legalnotice> 
+      <title>Feedback</title> 
+      <para>Para relatar um erro ou fazer uma sugestão sobre a aplicação ou seu manual, siga os passos na <ulink url="www.redetelecentro.com.br" type="help">Página de Feedback do Tucunaré</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+    <indexterm><primary>controle de acesso à internet</primary></indexterm>
+    <indexterm><primary>front-end para squid e sarg</primary></indexterm>
+
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="introduction"> 
+    <title>Introdução</title> 
+
+    <para>O controle de acesso à internet presente no <application>Ocara</application> é uma aplicação que permiti ou nega acesso a informações em redes de computadores, através do conteúdo de sua informação.</para>
+
+    <para>Usa uma configuração que faz cache internet. A vantagem de um cache internet é a de guardar localmente dados requisitados anteriormente, para em uma utilização futura, serem servidos localmente, evitando acessos repetidos a servidores distantes. Assim tornando a navegação mais rápida.</para>
+
+    <para>Como funciona o controle de acesso à internet?</para>
+
+    <para>Os filtros capturam as palavras dentro de pacotes de dados e comparam com palavras-chave de listas de negação e listas de liberação de acesso.</para>
+
+    <para>Se há uma palavra-chave em uma das listas ele permite ou nega acesso a informação.</para>
+
+  </sect1>
+
+  <sect1 id="getting-started"> 
+    <title>Iniciando</title> 
+<title>Bloquear/Desbloquear Site</title>
+	<para>Essa opção adiciona, remove e edita o site que será bloqueado pelo controle de acesso à internet no Telecentro Comunitário.</para>
+	<para>Lembre-se que NÃO é preciso colocar o WWW. ou HTTP://.</para> 
+	<para>Exemplo: exemplo.com.br, redesocial.com.br , revista.com.br.</para>
+	<para>Obs.: Ao Habilitar o Controle de Acesso à Internet. É preciso ao menos um site na lista de bloqueados para o controle de acesso à internet funcionar corretamente.</para>
+    <sect2 id="glade-start">
+    <title>Para acessar o <application>Controle de acesso à Internet</application></title>
+    <para>Você pode acessa-lo da seguinte maneira:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Menu <menuchoice><guisubmenu>Sistema</guisubmenu><guimenuitem>Administração</guimenuitem><guimenuitem>Ocara</guimenuitem></menuchoice></term>
+    		<listitem>
+    		<para>Escolha <menuchoice><guisubmenu>Ferramentas</guisubmenu><guimenuitem>Controle de acesso à internet</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="glade-when-start">
+    <title>O que você pode encontrar</title>
+        <para>Opções disponíveis:</para>
+
+        <variablelist>
+          <varlistentry> <term>Habilitar controle de acesso à internet</term></varlistentry>
+          <varlistentry> <term>Desabilitar controle de acesso à internet</term></varlistentry>
+          <varlistentry> <term>Bloquear/Desbloquear Site</term></varlistentry>
+          <varlistentry> <term>Bloquear/Desbloquear Palavra</term></varlistentry>
+          <varlistentry> <term>Recriar histórico de navegação</term></varlistentry>
+          <varlistentry> <term>Visualizar histórico de navegação</term></varlistentry>
+        </variablelist>
+
+    </sect2>
+   </sect1>
+   <sect1 id="opcoes"> 
+     <title>Explicando melhor cada opção disponível no menu</title> 
+     <sect2 id="habilitar">
+       <title>Habilitar controle de acesso à internet</title>
+       <para>Essa opção habilita o controle de acesso à internet no Telecentro Comunitário.</para>
+     </sect2>
+     <sect2 id="desabilitar">
+       <title>Desabilitar controle de acesso à internet</title>
+       <para>Essa opção desabilita o controle de acesso à internet no Telecentro Comunitário.</para>
+     </sect2>
+     <sect2 id="bloquear">
+       <title>Bloquear/Desbloquear Site</title>
+	<para>Essa opção adiciona, remove e edita o site que será bloqueado pelo controle de acesso à internet no Telecentro Comunitário.</para>
+	<para>Lembre-se que NÃO é preciso colocar o WWW. ou HTTP://.</para> 
+	<para>Exemplo: exemplo.com.br, redesocial.com.br , revista.com.br.</para>
+	<para>Obs.: Ao Habilitar o Controle de Acesso à Internet. É preciso ao menos um site na lista de bloqueados para o controle de acesso à internet funcionar corretamente.</para>
+     </sect2>
+     <sect2 id="desbloquear">
+       <title>Bloquear/Desbloquear Palavra</title>
+       <para>Essa opção adiciona, remove e edita a palavra que será bloqueada pelo controle de acesso à internet no Telecentro Comunitário.</para>
+       <para>Cuidado: A página será bloqueada por completo casa contenha alguma palavra adicionada nessa opção.</para>
+       <para>Exemplo: sexo, msn.</para>
+       <para>Obs.: Ao Habilitar o Controle de Acesso à Internet. É preciso ao menos uma palavra na lista de bloqueados para o controle de acesso à internet funcionar corretamente.</para>
+     </sect2>
+     <sect2 id="recriar">
+       <title>Recriar histórico de navegação</title>
+       <para>Essa opção recria os registros de navegação do controle de acesso à internet  no Telecentro Comunitário.</para>
+     </sect2>     
+     <sect2 id="visualizar">
+       <title>Visualizar histórico de navegação</title>
+       <para>Essa opção visualiza o relatório de acesso de sites no Telecentro Comunitário.</para>
+     </sect2>
+     
+  </sect1>
+
+  
+<sect1 id="about"> 
+    <title>Sobre o Controle de acesso à Internet</title> 
+    <para>Para mais informações, por favor visite o <ulink url="http://www.redetelecentro.com.br" type="http">Portal Redetelecentro</ulink>.</para>
+    <para>Para relatar um erro ou fazer uma sugestão em relação a esta aplicação ou a este manual, você pode enviar um email para <address><email>tucunareidbb@googlegroups.com</email></address></para>
+
+    <para>Siga-nos no twitter: <ulink url="http://twitter.com/distrotucunare" type="http">@distrotucunare</ulink></para> 
+
+    <para>Entre em nossa comunidade no Orkut: <ulink url="http://www.orkut.com.br/Community?cmm=116546529" type="http">Distribuição Tucunaré no Orkut</ulink></para>
+
+    <para>Entre em nossa comunidade no Software Livre: <ulink url="http://softwarelivre.org/profile/tucunare" type="http">Distribuição Tucunaré no Software Livre</ulink></para>
+
+
+    <para>Este programa é distribuído de acordo com os termos da Licença Pública Geral GNU publicada pela Fundação Free Software; ou a versão 2 da Licença ou (por sua opção) qualquer versão mais recente. Uma cópia desta licença pode ser encontrada neste <ulink url="ghelp:gpl" type="help">link</ulink> ou no arquivo COPYING incluído com o código fonte deste programa.</para>
+  </sect1> 
+
+</article>

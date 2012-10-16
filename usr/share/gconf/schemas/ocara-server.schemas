@@ -1,0 +1,777 @@
+<?xml version="1.0"?>
+<gconfschemafile><schemalist>
+
+    <schema>
+      <key>/schemas/apps/ocara-server/name</key>
+      <applyto>/apps/ocara-server/name</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      <default>Ocara</default>
+      
+      <locale name="C">
+        <short>The name for Cyber Cafe</short>
+        <long>The name used to identify the Cyber Cafe.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>O nome para o Cyber Café</short>
+        <long>O nome usado para identificar o Cyber Café.</long>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/admin_email</key>
+      <applyto>/apps/ocara-server/admin_email</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+            
+      <locale name="C">
+        <short>The email of Administrator</short>
+      </locale>
+
+            
+      <locale name="pt_BR">
+        <short>O Email do Administrador</short>
+      </locale>
+      
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/ocara-server/currency</key>
+      <applyto>/apps/ocara-server/currency</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      <default>R$</default>
+      
+      <locale name="C">
+        <short>Abbreviation of currency</short>
+        <long>Kind of money used in the Cyber Cafe</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Abreviação do dinheiro</short>
+        <long>Timpo de dinheiro usado no Cyber Café</long>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/price_per_hour</key>
+      <applyto>/apps/ocara-server/price_per_hour</applyto>
+      <owner>ocara-server</owner>
+      <type>float</type>
+      <locale name="C">
+        <short>Price per hour</short>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Preço por hora</short>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/listen_port</key>
+      <applyto>/apps/ocara-server/listen_port</applyto>
+      <owner>ocara-server</owner>
+      <type>int</type>
+      <default>4558</default>
+      <locale name="C">
+        <short>Port to Listen in the network</short>
+      </locale>
+
+      <locale name="pt_BR">
+        <short>Porta usada para a escuta na rede</short>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/use_psyco</key>
+      <applyto>/apps/ocara-server/use_psyco</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>false</default>
+      
+      <locale name="C">
+        <short>Use psyco to python speed up.</short>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Usar psyco para o acelerar o python.</short>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/db/engine</key>
+      <applyto>/apps/ocara-server/db/engine</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      <default>postgres</default>
+      
+      <locale name="C">
+        <short>Database engine</short>
+        <long>Current on: sqlite, mysql and postgres.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Motor do banco de dados</short>
+        <long>No momento: sqlite, mysql e postgres.</long>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/db/port</key>
+      <applyto>/apps/ocara-server/db/port</applyto>
+      <owner>ocara-server</owner>
+      <type>int</type>
+      <default>5436</default>      
+
+      <locale name="C">
+        <short>Port used to connect into database server</short>
+      </locale>
+      
+
+      <locale name="pt_BR">
+        <short>Porta usada para conectar no servidor de banco de dados</short>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/db/host</key>
+      <applyto>/apps/ocara-server/db/host</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      <default>localhost</default>      
+
+      <locale name="C">
+        <short>Database hostname</short>
+      </locale>
+      
+
+      <locale name="pt_BR">
+        <short>Host do banco de dados</short>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/db/database</key>
+      <applyto>/apps/ocara-server/db/database</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      <default>ocara</default>        
+
+      <locale name="C">
+        <short>Database name</short>
+      </locale>
+        
+
+      <locale name="pt_BR">
+        <short>Nome do banco de dados</short>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/db/custom_sqlite_file</key>
+      <applyto>/apps/ocara-server/db/custom_sqlite_file</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      
+      <locale name="C">
+        <short>Custom file path to sqlite database</short>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Local personalizado para o arquivo de banco de dados</short>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/db/user</key>
+      <applyto>/apps/ocara-server/db/user</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      <default>ocara</default>      
+
+      <locale name="C">
+        <short>Username used to auth in the database server</short>
+      </locale>
+      
+
+      <locale name="pt_BR">
+        <short>Usuário usado para autenticação no servidor de banco de dados</short>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/db/password</key>
+      <applyto>/apps/ocara-server/db/password</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      <default>liberdade</default>     
+
+      <locale name="C">
+        <short>Password used to auth in the database server</short>
+      </locale>
+     
+
+      <locale name="pt_BR">
+        <short>Senha usada para autenticação no servidor de banco de dados</short>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/show_notifications</key>
+      <applyto>/apps/ocara-server/ui/show_notifications</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>true</default>
+      
+      <locale name="C">
+        <short>Allow use notifications popups</short>
+        <long>Allow use notifications to show alerts and informations.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Permite usar popups de notificação</short>
+        <long>Permite usar notificações para exibir alertas e informações.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/maximized</key>
+      <applyto>/apps/ocara-server/ui/maximized</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>true</default>
+      
+      <locale name="C">
+        <short>Main window maximization state</short>
+        <long>If true, the main window is maximized.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Estado de maximização da janela principal</short>
+        <long>Se verdadeiro, a janela principal será maximizada.</long>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/height</key>
+      <applyto>/apps/ocara-server/ui/height</applyto>
+      <owner>ocara-server</owner>
+      <type>int</type>
+      <default>550</default>
+      
+      <locale name="C">
+        <short>Main window height</short>
+        <long>Main window height.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Altura da janela principal</short>
+        <long>Altura da janela principal.</long>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/width</key>
+      <applyto>/apps/ocara-server/ui/width</applyto>
+      <owner>ocara-server</owner>
+      <type>int</type>
+      <default>800</default>
+      
+      <locale name="C">
+        <short>Main window width</short>
+        <long>Main window width.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Largura da janela principal</short>
+        <long>Largura da janela principal.</long>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/visible</key>
+      <applyto>/apps/ocara-server/ui/visible</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>true</default>
+      
+      <locale name="C">
+        <short>Whether the window is visible</short>
+        <long>When set to false, causes start only as a tray icon with the window hidden.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Quando a janela está visível</short>
+        <long>Quando é Falso, Inicia apenas na bandeija com a janela escondida.</long>
+      </locale>
+      
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/position_x</key>
+      <applyto>/apps/ocara-server/ui/position_x</applyto>
+      <owner>ocara-server</owner>
+      <type>int</type>
+      <default>0</default>
+      
+      <locale name="C">
+        <short>Main window X position</short>
+        <long>Main window X position.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Posição X na janela principal.</short>
+        <long>Posição X na janela principal.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/position_y</key>
+      <applyto>/apps/ocara-server/ui/position_y</applyto>
+      <owner>ocara-server</owner>
+      <type>int</type>
+      <default>0</default>
+      
+      <locale name="C">
+        <short>Main window Y position</short>
+        <long>Main window Y position.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Posição Y na janela principal</short>
+        <long>Posição Y na janela principal.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/machines_columns</key>
+      <applyto>/apps/ocara-server/ui/machines_columns</applyto>
+      <owner>ocara-server</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[Estacao,user,time,time_last,total_to_pay]</default>
+      
+      <locale name="C">
+        <short>Columns visible in machines treeview</short>
+        <long>Columns visible in machines treeview.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Colunas visíveis das Máquinas</short>
+        <long>Colunas visíveis das Máquinas.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/users_columns</key>
+      <applyto>/apps/ocara-server/ui/users_columns</applyto>
+      <owner>ocara-server</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[nick,name,email,credit]</default>
+      
+      <locale name="C">
+        <short>Columns visible in users treeview</short>
+        <long>Columns visible in users treeview.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Colunas visíveis na lista de usuários</short>
+        <long>Colunas visíveis na lista de usuários.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/cash_flow_columns</key>
+      <applyto>/apps/ocara-server/ui/cash_flow_columns</applyto>
+      <owner>ocara-server</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[day,hour,type,user,description,value]</default>
+      
+      <locale name="C">
+        <short>Columns visible in Cash flow treeview</short>
+        <long>Columns visible in Cash flow treeview.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Colunas Visíveis no Movimento do Caixa</short>
+        <long>Colunas Visíveis no Movimento do Caixa.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/open_debts_machine_columns</key>
+      <applyto>/apps/ocara-server/ui/open_debts_machine_columns</applyto>
+      <owner>ocara-server</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[day,hour,machine,start_time,end_time,user,value]</default>
+      
+      <locale name="C">
+        <short>Columns visible in Open Debts Machine treeview</short>
+        <long>Columns visible in Open Debts Machine treeview.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Colunas visíveis na lista de dividas abertas de máquinas</short>
+        <long>Colunas visíveis na lista de dividas abertas de máquinas.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/open_debts_other_columns</key>
+      <applyto>/apps/ocara-server/ui/open_debts_other_columns</applyto>
+      <owner>ocara-server</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[day,hour,time,user,value]</default>
+      
+      <locale name="C">
+        <short>Columns visible in Open Debts Other treeview</short>
+        <long>Columns visible in Open Debts Other treeview.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Colunas visíveis na lista de outras dividas abertas</short>
+        <long>Colunas visíveis na lista de outras dívidas abertas.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/users_block_columns</key>
+      <applyto>/apps/ocara-server/ui/users_block_columns</applyto>
+      <owner>ocara-server</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[user_block,description_block,email_block,date_block]</default>
+      
+      <locale name="C">
+        <short>Columns visible in Users Block treeview</short>
+        <long>Columns visible in Users Block treeview.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/users_block_borrow_columns</key>
+      <applyto>/apps/ocara-server/ui/users_block_borrow_columns</applyto>
+      <owner>ocara-server</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[nick_borrow,description_borrow,email_borrow,date_borrow]</default>
+      
+      <locale name="C">
+        <short>Columns visible in Users Block Borrow treeview</short>
+        <long>Columns visible in Users Block Borrow treeview.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/machine_alienat_columns</key>
+      <applyto>/apps/ocara-server/ui/machine_alienat_columns</applyto>
+      <owner>ocara-server</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[number_ben,name,motivo,description,date]</default>
+      
+      <locale name="C">
+        <short>Columns visible in Machine Alienation treeview</short>
+        <long>Columns visible in Machine Alienation treeview.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/heritage_columns</key>
+      <applyto>/apps/ocara-server/ui/heritage_columns</applyto>
+      <owner>ocara-server</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      <default>[numero,description,descriptionB,descriptionR,date]</default>
+      
+      <locale name="C">
+        <short>Columns visible in Heritage treeview</short>
+        <long>Columns visible in Heritage treeview.</long>
+      </locale>
+    </schema>
+    
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/page_selected</key>
+      <applyto>/apps/ocara-server/ui/page_selected</applyto>
+      <owner>ocara-server</owner>
+      <type>int</type>
+      <default>0</default>
+      
+      <locale name="C">
+        <short>Page selected number</short>
+        <long>Page selected number.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Número da página selecionada</short>
+        <long>Número da página selecionada.</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/show_toolbar</key>
+      <applyto>/apps/ocara-server/ui/show_toolbar</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>true</default>
+      
+      <locale name="C">
+        <short>Show Toolbar</short>
+        <long>If case true, Toolbar will be show</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Mostrar Barra de Ferramentas</short>
+        <long>Se caso verdadeiro, a Barra de Ferramentas será exibida</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/show_status_bar</key>
+      <applyto>/apps/ocara-server/ui/show_status_bar</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>true</default>
+      
+      <locale name="C">
+        <short>Show Status Bar</short>
+        <long>If case true, Status Bar will be show</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Mostrar Barra de Status</short>
+        <long>Se caso verdadeiro, a Barra de Status será exibida</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/ui/show_side_bar</key>
+      <applyto>/apps/ocara-server/ui/show_side_bar</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>true</default>
+      
+      <locale name="C">
+        <short>Show Side Bar</short>
+        <long>If case true, Side Bar will be show</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Mostrar Barra de Lateral</short>
+        <long>Se caso verdadeiro, a Barra Lateral será exibida</long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/ocara-server/default_welcome_msg</key>
+      <applyto>/apps/ocara-server/default_welcome_msg</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>true</default>
+      
+      <locale name="C">
+        <short>If true, show default welcome message</short>
+        <long>If true, show default welcome message, if false, show custom welcome message.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Se caso verdadeiro, mostra a mensagem de boas vindas padrão</short>
+        <long>Se caso verdadeiro, mostra a mensagem de boas vindas padrão, se caso falso, mostra a mensagem de boas vindas personalizada</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/welcome_msg</key>
+      <applyto>/apps/ocara-server/welcome_msg</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      
+      <locale name="C">
+        <short>Custom welcome message</short>
+        <long>Custom welcome message, to show this message 'default_welcome_msg' needs be false.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Mensagem personalizada de Boas Vindas</short>
+        <long>Mensagem personalizada de Boas Vindas, para exibir essa mensagem &apos;default_welcome_msg&apos; precisa ser falso.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/login_suport</key>
+      <applyto>/apps/ocara-server/login_suport</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>true</default>
+      
+      <locale name="C">
+        <short>Login suport into clients.</short>
+        <long>Allow login with user and password into clients.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Suporte a login nos clientes.</short>
+        <long>Permite entrada com usuário e senha nos clientes.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/background</key>
+      <applyto>/apps/ocara-server/background</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>true</default>
+      
+      <locale name="C">
+        <short>Show background image into screen</short>
+        <long>If true, show background image into screen, 'background_path' must be specified.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Mostrar imagem de fundo na tela</short>
+        <long>Se caso verdadeiro, mostra imagem de fundo na tela, &apos;background_path&apos; precisa ser especificado.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/logo</key>
+      <applyto>/apps/ocara-server/logo</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>false</default>
+      
+      <locale name="C">
+        <short>Show logo image into screen</short>
+        <long>If true, show logo image into screen, 'logo_path' must be specified.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Mostrar imagem de logo na tela</short>
+        <long>Se verdadeiro, mostra a imagem de logo na tela, &apos;logo_path&apos;, precisa ser especificado.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/background_path</key>
+      <applyto>/apps/ocara-server/background_path</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      
+      <locale name="C">
+        <short>Path to background image file</short>
+        <long>Path to background image file.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Localização para a imagem de fundo</short>
+        <long>Localização para a imagem de fundo.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/logo_path</key>
+      <applyto>/apps/ocara-server/logo_path</applyto>
+      <owner>ocara-server</owner>
+      <type>string</type>
+      
+      <locale name="C">
+        <short>Path to logo image file</short>
+        <long>Path to logo image file.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Localização para a imagem de logo</short>
+        <long>Localização para a imagem de logo.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/close_apps</key>
+      <applyto>/apps/ocara-server/close_apps</applyto>
+      <owner>ocara-server</owner>
+      <type>bool</type>
+      <default>false</default>
+      
+      <locale name="C">
+        <short>If true, applications will closed after finishing the session</short>
+        <long>If true, applications will closed after finishing the session.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Se caso verdadeiro, aplicações serão fechadas depois que fechar a sessão</short>
+        <long>Se caso verdadeiro, aplicações serão fechadas depois que fechar a sessão.</long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/ocara-server/close_apps_list</key>
+      <applyto>/apps/ocara-server/close_apps_list</applyto>
+      <owner>ocara-server</owner>
+      <type>list</type>
+      <list_type>string</list_type>
+      
+      <locale name="C">
+        <short>Applications to be closed after finishing the session</short>
+        <long>Applications to be closed after finishing the session.</long>
+      </locale>
+
+      
+      <locale name="pt_BR">
+        <short>Aplicações que serão fechadas apos a sessão ser finalizada.</short>
+        <long>Aplicações que serão fechadas apos a sessão ser finalizada.</long>
+      </locale>
+    </schema>
+    
+    
+    
+</schemalist></gconfschemafile>

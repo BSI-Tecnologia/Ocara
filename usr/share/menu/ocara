@@ -1,0 +1,6 @@
+?package(ocara-server):\
+	needs="X11"\
+	section="Applications/System/Administration"\
+	title="Ocara Servidor"\
+	command="su-to-root -X -c /usr/sbin/ocara-server"\
+	icon="/usr/share/pixmaps/ocara-server.xpm"

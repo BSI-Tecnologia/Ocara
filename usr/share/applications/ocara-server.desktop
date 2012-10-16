@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Ocara Servidor
+Comment=Manager of Telecentro for Gnome Desktop
+Comment[pt_BR]=Gerenciador de Telecentro para Gnome Desktop
+Exec=gksu /usr/sbin/ocara-server
+Icon=ocara-server
+Terminal=false
+Type=Application
+Categories=GNOME;System;Settings;
+StartupNotify=true

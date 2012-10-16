@@ -1,0 +1,31 @@
+<oaf_info>
+
+<oaf_server iid="OAFIID:GNOME_OcaraClientApplet_Factory"
+	    type="exe"
+	    location="/usr/libexec/ocara-client-applet">
+
+	<oaf_attribute name="repo_ids" type="stringv">
+		<item value="IDL:Bonobo/GenericFactory:1.0"/>
+		<item value="IDL:Bonobo/Unknown:1.0"/>
+	</oaf_attribute>
+	<oaf_attribute name="name" type="string" value="Ocara Client Factory"/>
+	<oaf_attribute name="description" type="string" value="Applet to show Ocara Client status."/>
+
+</oaf_server>
+
+<oaf_server iid="OAFIID:GNOME_OcaraClientApplet"
+	    type="factory" 
+	    location="OAFIID:GNOME_OcaraClientApplet_Factory">
+
+	<oaf_attribute name="repo_ids" type="stringv">
+		<item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
+		<item value="IDL:Bonobo/Control:1.0"/>
+		<item value="IDL:Bonobo/Unknown:1.0"/>
+	</oaf_attribute>
+	<oaf_attribute name="name" type="string" value="Ocara Client Applet"/>
+	<oaf_attribute name="description" type="string" value="Get informations from Ocara Client"/>
+	<oaf_attribute name="description-pt_BR" type="string" value="Busca informações do cliente Ocara"/>
+	<oaf_attribute name="panel:icon" type="string" value="ocara-client"/>
+</oaf_server>
+
+</oaf_info>

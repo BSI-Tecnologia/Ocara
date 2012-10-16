@@ -1,0 +1,72 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import cmd, string
+
+__author__="Henrique Fernandes Baggio - \
+            email: hnrqbaggio AT SPAMFREE gmail DOT com"
+__date__ ="Apresentado originalmente como palestra relâmpago na PyConBrasil 2008"
+
+
+from subprocess import Popen, PIPE
+from datetime import date
+
+class Cmd(object):
+    def __init__(self, cmd):
+          self.cmd = cmd
+
+    def __call__(self, *args):
+         command = '%s %s' %(self.cmd, ' '.join(args))
+         result = Popen(command, stdout=PIPE, stderr=PIPE, shell=True)
+         return result.communicate()
+
+class Sh(object):
+    def __getattr__(self, attribute):
+         return Cmd(attribute)
+
+if __name__ == "__main__":
+
+     #data-envio = datetime.datetime.now()
+     #data-envio = datetime.date(*data-envio).strftime("%x")
+
+     #print data-envio
+
+    data-envio2 = date.today()
+    
+    print data-envio2.day
+    print data-envio2.month
+    print data-envio2.year
+
+    sh = Sh()
+
+#    cmd = sh.netstat("-t -e |grep x11| sed -e 's/:/ /g'| awk '{print $6,$9}'| grep -v root | grep -v tux | sort | uniq")
+
+#    retorno = string.strip(cmd[0])
+
+#    if retorno != "":
+#       print cmd[0]
+#       print cmd
+       #ip = sh.getent(("hosts | grep -w %s | awk '{print $1}'") % retorno[0:12])
+    #else:
+       #ip = session.client_address[0]
+       #print ip[0]	
+
+       #cmd2 = sh.rusers(("-l %s | awk '{print $1}' | uniq") % ip)
+
+       #print cmd2[0]
+
+#    VALIDO = "113.451.253-80"
+#    INVALIDO = "31354110274"
+
+#    valido = CPF(VALIDO)
+#    invalido = CPF(INVALIDO)
+
+#    if len(valido.__str__()) > 10 and len(valido.__str__()) <= 14:
+#        print "Certo"
+
+#    print invalido.__str__()
+    
+#    print retorno
+
+    
+    #

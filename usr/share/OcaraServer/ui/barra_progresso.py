@@ -1,0 +1,35 @@
+import wx,os,subprocess as sub
+
+class Main(wx.ProgressDialog):
+
+   def __init__(self, parent, mensagem, comando):
+      
+	wx.ProgressDialog.__init__(self, mensagem,
+		                "Aguarde enquanto é processada a requisição...",
+		                 maximum = 100,
+		                 parent=self,
+		                 style = (wx.PD_CAN_ABORT
+		                         | wx.PD_APP_MODAL
+		                         | wx.PD_ELAPSED_TIME
+		                         | wx.PD_ESTIMATED_TIME
+		                         | wx.PD_REMAINING_TIME))
+
+	
+	p = sub.Popen(commando,shell=True, stdout=sub.PIPE).stdout
+	while 1:
+	     line = p.readline()
+	     if not line: break
+	     if line.strip().isdigit():
+		msg = "Executando... %d%%" % int(line)
+		(keepGoing) = dlg.Update(int(line),msg)
+		lastline = line
+		if int(line) == 100:
+		   dlg.Update(100,newmsg='Terminado... (this may take a sec)')
+		else:
+		   (keepGoing) = dlg.Update(int(lastline))
+		if line == "ALL DONE":
+		   keepGoing = False
+		   break
+		if not keepGoing:
+		   os.system("killall -9 some_program")
+		   break
