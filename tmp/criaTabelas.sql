@@ -203,6 +203,13 @@ CREATE TABLE "state" (
   PRIMARY KEY ("id")
 );
 
+INSERT INTO perfil(id, perfil_description) VALUES 
+(1, 'Gestor');
+INSERT INTO perfil(id, perfil_description) VALUES 
+(2, 'Monitor');
+INSERT INTO perfil(id, perfil_description) VALUES 
+(3, 'Frequentador');
+
 INSERT INTO "state" ("id", "name", "sigla") VALUES
 (1, 'ACRE', 'AC'),
 (2, 'ALAGOAS', 'AL'),

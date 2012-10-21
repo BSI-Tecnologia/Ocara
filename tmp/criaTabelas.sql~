@@ -19,6 +19,18 @@
 
 -- Tabela Description Block--------------------------------------------------------
 
+CREATE TABLE "versions" (
+  "id" integer NOT NULL,
+  "name" varchar(25) NULL,
+  "value" varchar(40) NULL,
+  "codigo_aps" varchar(40) NULL,
+  "codigo_onid" varchar(40) NULL,
+  PRIMARY KEY ("id")
+);
+
+INSERT INTO "versions" ("id", "name", "value", "codigo_aps", "codigo_onid") VALUES
+(1, 'database_version', '0.9', '123', '123');
+
 CREATE TABLE "description_block" (
   "id" integer NOT NULL,
   "description" text NULL,
@@ -190,6 +202,10 @@ CREATE TABLE "state" (
   "codigo_ibge" varchar(5) NOT NULL DEFAULT '',	
   PRIMARY KEY ("id")
 );
+
+INSERT INTO perfil(id, perfil_description) VALUES (1, 'Gestor');
+INSERT INTO perfil(id, perfil_description) VALUES (2, 'Monitor');
+INSERT INTO perfil(id, perfil_description) VALUES (3, 'Frequentador');
 
 INSERT INTO "state" ("id", "name", "sigla") VALUES
 (1, 'ACRE', 'AC'),
