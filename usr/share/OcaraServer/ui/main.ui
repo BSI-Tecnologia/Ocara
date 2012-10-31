@@ -1362,14 +1362,16 @@
               </packing>
             </child>
             <child>
-              <object class="GtkToolButton" id="bntaction5">
+              <object class="GtkMenuToolButton" id="btnPerfil">
                 <property name="visible">True</property>
+                <property name="is_important">True</property>
                 <property name="use_underline">True</property>
-                <signal name="clicked" handler="on_bntaction5_clicked" swapped="no"/>
+                <property name="stock_id">gtk-dialog-authentication</property>
+                <property name="label" >Perfil usuário</property>
+                <signal name="clicked" handler="on_perfil_usuario_clicked"/>
               </object>
               <packing>
                 <property name="expand">False</property>
-                <property name="homogeneous">True</property>
               </packing>
             </child>
 	    <child>
@@ -2135,6 +2137,7 @@
                             <property name="active">True</property>
                             <property name="draw_indicator">False</property>
                             <signal name="toggled" handler="on_machine_tgbnt_toggled"/>
+                            <signal name="clicked" handler="on_machine_tgbnt_toggled"/>
                             <child>
                               <object class="GtkAlignment" id="alignment2321">
                                 <property name="visible">True</property>

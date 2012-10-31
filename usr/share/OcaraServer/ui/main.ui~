@@ -401,7 +401,7 @@
           <object class="GtkAction" id="clear_history">
             <property name="stock_id">gtk-clear</property>
             <property name="name">clear_history</property>
-            <property name="label" translatable="yes">_Clear History</property>
+            <property name="label" translatable="yes">Limpar todo histórico de utilização</property>
             <signal handler="on_clear_history" name="activate"/>
           </object>
         </child>
@@ -488,7 +488,7 @@
           <object class="GtkAction" id="habilitarFiltroConteudoMenu">
             <property name="icon-name">gtk-yes</property>
             <property name="name">HabilitarFiltroConteudoMenu</property>
-            <property name="label" translatable="yes">Habilitar controle de acesso à internet</property>
+            <property name="label" translatable="yes">Habilitar Proxy (Filtro de conteúdo)</property>
             <signal handler="on_enabled_filtro_conteudo" name="activate"/>
           </object>
         </child>
@@ -497,7 +497,7 @@
           <object class="GtkAction" id="desabilitarFiltroConteudoMenu">
             <property name="icon-name">gtk-no</property>
             <property name="name">DesabilitarFiltroConteudoMenu</property>
-            <property name="label" translatable="yes">Desabilitar controle de acesso à internet</property>
+            <property name="label" translatable="yes">Desabilitar Proxy (Filtro de conteúdo)</property>
             <signal handler="on_disabled_filtro_conteudo" name="activate"/>
           </object>
         </child>
@@ -525,7 +525,7 @@
           <object class="GtkAction" id="recriarCacheMenu">
             <property name="icon-name">gtk-execute</property>
             <property name="name">RecriarCacheMenu</property>
-            <property name="label" translatable="yes">Recriar histórico de navegação</property>
+            <property name="label" translatable="yes">Restaurar configurações do filtro de conteúdo</property>
             <signal handler="on_recriar_cache" name="activate"/>
           </object>
         </child>
@@ -662,8 +662,7 @@
           <menuitem action="coluns_mnu"/>
         </menu>
         <menu action="menutools">
-          
-	  <menuitem action="cadastroTelecentro"/>
+          <menuitem action="cadastroTelecentro"/>
           <!--separator/>
 	  <menuitem action="menuTelecentro"/-->
           <separator/>
@@ -1348,6 +1347,57 @@
                 <property name="visible">True</property>
                 <property name="use_underline">True</property>
                 <signal name="clicked" handler="on_bntaction4_clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="toolbar_separator3">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkMenuToolButton" id="btnPerfil">
+                <property name="visible">True</property>
+                <property name="is_important">True</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-dialog-authentication</property>
+                <property name="label" >Perfil usuário</property>
+                <signal name="clicked" handler="on_perfil_usuario_clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="bntaction5">
+                <property name="visible">True</property>
+                <property name="use_underline">True</property>
+                <signal name="clicked" handler="on_bntaction5_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+	    <child>
+              <object class="GtkSeparatorToolItem" id="toolbar_separator4">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="bntaction6">
+                <property name="visible">True</property>
+                <property name="use_underline">True</property>
+                <signal name="clicked" handler="on_bntaction6_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -2098,6 +2148,7 @@
                             <property name="active">True</property>
                             <property name="draw_indicator">False</property>
                             <signal name="toggled" handler="on_machine_tgbnt_toggled"/>
+                            <signal name="clicked" handler="on_machine_tgbnt_toggled"/>
                             <child>
                               <object class="GtkAlignment" id="alignment2321">
                                 <property name="visible">True</property>
