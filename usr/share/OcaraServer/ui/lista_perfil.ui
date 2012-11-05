@@ -99,6 +99,20 @@
                 <property name="homogeneous">True</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkToolButton" id="config_perfil">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Permissões</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-dialog-authentication</property>
+                <signal name="clicked" handler="on_config_perfil_clicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
