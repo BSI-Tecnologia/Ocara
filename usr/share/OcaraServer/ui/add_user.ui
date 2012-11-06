@@ -334,7 +334,7 @@
                          <property name="x_options">GTK_FILL</property>
                       </packing>
                     </child>
-		    <child>
+		            <child>
                       <object class="GtkLabel" id="situation_label">
                          <property name="visible">True</property>
                          <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
@@ -346,7 +346,7 @@
                       <packing>
                          <property name="left_attach">3</property>
                          <property name="right_attach">4</property>
-			 <property name="top_attach">5</property>
+		                 <property name="top_attach">5</property>
                          <property name="bottom_attach">6</property>
                          <property name="x_options">GTK_FILL</property>
                       </packing>
@@ -356,7 +356,21 @@
                       <placeholder/>
                     </child>
                     <child>
-                      <placeholder/>
+                      <object class="GtkLabel" id="perfil_label">
+                         <property name="visible">True</property>
+                         <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
+                         <property name="xalign">0</property>
+                         <property name="label" translatable="yes">Perfil:</property>
+                         <property name="use_markup">True</property>
+                         <property name="use_underline">True</property>
+                      </object>
+                      <packing>
+                         <property name="left_attach">1</property>
+                         <property name="right_attach">2</property>
+			             <property name="top_attach">6</property>
+                         <property name="bottom_attach">7</property>
+                         <property name="x_options">GTK_FILL</property>
+                      </packing>
                     </child>
                     <child>
                       <placeholder/>
