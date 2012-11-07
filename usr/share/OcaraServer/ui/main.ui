@@ -1395,6 +1395,27 @@
                 <property name="homogeneous">True</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="toolbar_separator4">
+                <property name="visible">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkMenuToolButton" id="btnRelatorios">
+                <property name="visible">True</property>
+                <property name="is_important">True</property>
+                <property name="use_underline">True</property>
+                <property name="stock_id">gtk-print</property>
+                <property name="label" >Relatórios</property>
+                <signal name="clicked" handler="on_perfil_usuario_clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
