@@ -60,4 +60,6 @@ if [ "$saidap" != "ocara" ]; then
 
 fi
 
+python /tmp/correcao_emprestimo.py
+
 exit 0
