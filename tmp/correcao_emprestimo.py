@@ -10,6 +10,8 @@ from string import *
 from datetime import *
 import os
 
+print "### rotina de correção da tabela de empréstimo iniciada."
+
 try:
 	conn = psycopg2.connect("\
 	    dbname='ocara'\
@@ -46,8 +48,6 @@ dbCursor.execute("DELETE FROM schedule_of_borrow")
 dbCursor.execute("ALTER TABLE schedule_of_borrow DROP COLUMN name_heritage;")
 
 dbCursor.execute("ALTER TABLE schedule_of_borrow ADD COLUMN heritage_id integer;")
-
-dbCursor.execute("ALTER TABLE schedule_of_borrow ADD CONSTRAINT heritage_id_fk FOREIGN KEY (heritage_id) REFERENCES heritage (id);")
 
 conn.commit()
 conn.close()
