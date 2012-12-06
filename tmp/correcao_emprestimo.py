@@ -10,7 +10,7 @@ from string import *
 from datetime import *
 import os
 
-print "### rotina de correção da tabela de empréstimo iniciada."
+print "### rotina de atualizações para as novas funcionalidades e e correções do Ocara iniciada."
 
 try:
 	conn = psycopg2.connect("\
@@ -28,28 +28,31 @@ dbCursor = conn.cursor()
 
 try:
     dbCursor.execute("CREATE TABLE schedule_of_borrow_bkp (LIKE schedule_of_borrow)")
-except Exception, error:
-    print "### Erro ao criar a tabela de backup dos empréstimos > ", error
-    exit()
+    dbCursor.execute("SELECT * FROM schedule_of_borrow")
+    result_list = dbCursor.fetchall()
+    try:
+        for result in result_list:
+            dbCursor.execute("INSERT INTO schedule_of_borrow_bkp VALUES (%s, %s, %s, %s, %s, %s, %s)", (result[0],result[1],result[2],result[3],result[4],result[5],result[6]))
+    except Exception, error1:
+        print "### Erro ao inserir os dados antigos de empréstimos na tabela de backup > ", error1
+    dbCursor.execute("DELETE FROM schedule_of_borrow")
+    dbCursor.execute("ALTER TABLE schedule_of_borrow DROP COLUMN name_heritage;")
+    dbCursor.execute("ALTER TABLE schedule_of_borrow ADD COLUMN heritage_id integer;")
+except Exception, error2:
+    print "### Erro ao criar a tabela de backup dos empréstimos > ", error2
 
-dbCursor.execute("SELECT * FROM schedule_of_borrow")
-result_list = dbCursor.fetchall()
+sql_txt = open( '/tmp/sql.txt')
+sql_cmds = sql_txt.readlines()
+for cmd in sql_cmds :
+    try:
+        dbCursor.execute(cmd)
+        print ">>> OK >>> %s" % (cmd,)
+    except Exception, error:
+        print ">>> ERRO >>> %s >>> %s" % (cmd, error,)
+sql_txt.close()
 
-try:
-    for result in result_list:
-        dbCursor.execute("INSERT INTO schedule_of_borrow_bkp VALUES (%s, %s, %s, %s, %s, %s, %s)", (result[0],result[1],result[2],result[3],
-            result[4],result[5],result[6]))
-except Exception, error:
-    print "### Erro ao inserir os dados antigos de empréstimos na tabela de backup > ", error
-    exit()
-
-dbCursor.execute("DELETE FROM schedule_of_borrow")
-
-dbCursor.execute("ALTER TABLE schedule_of_borrow DROP COLUMN name_heritage;")
-
-dbCursor.execute("ALTER TABLE schedule_of_borrow ADD COLUMN heritage_id integer;")
 
 conn.commit()
 conn.close()
 
-print "### rotina de correção da tabela de empréstimo executada com sucesso."
+print "### rotina de atualizações para as novas funcionalidades e e correções do Ocara executada."
