@@ -86,6 +86,7 @@ INSERT INTO action (id, action_category_id, description) VALUES (53, 9, 'fatura 
 INSERT INTO action (id, action_category_id, description) VALUES (54, 9, 'utilização de bens');
 INSERT INTO action (id, action_category_id, description) VALUES (55, 9, 'utilização de máquinas');
 INSERT INTO action (id, action_category_id, description) VALUES (56, 9, 'utilização de frequentadores');
+INSERT INTO action (id, action_category_id, description) VALUES (57, 9, 'baixar débitos do frequentador');
 ALTER TABLE ONLY action ADD CONSTRAINT action_pkey PRIMARY KEY (id);
 ALTER TABLE ONLY action ADD CONSTRAINT action_category_id_fkey FOREIGN KEY (action_category_id) REFERENCES action_category(id);
 --
