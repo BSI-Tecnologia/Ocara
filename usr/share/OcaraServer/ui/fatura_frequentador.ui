@@ -4,8 +4,9 @@
   <!-- interface-naming-policy project-wide -->
   <object class="GtkWindow" id="window2">
     <property name="can_focus">False</property>
-    <property name="default_height">250</property>
+    <property name="title" translatable="yes">Relatório de Serviços não Pagos</property>
     <property name="window_position">center-on-parent</property>
+    <property name="default_height">250</property>
     <property name="destroy_with_parent">True</property>
     <property name="type_hint">dialog</property>
     <property name="gravity">east</property>
@@ -15,6 +16,7 @@
         <property name="can_focus">False</property>
         <child>
           <object class="GtkHBox" id="hbox4">
+            <property name="height_request">60</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <child>
@@ -36,7 +38,7 @@
               <object class="GtkLabel" id="titulo">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Relatório de Serviços Não Pagos
+                <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Consulta Débitos em Aberto
 &lt;/b&gt;&lt;/big&gt;</property>
                 <property name="use_markup">True</property>
               </object>
@@ -71,9 +73,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkEntry" id="user_nick">
+              <object class="GtkTable" id="table1">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <placeholder/>
+                </child>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -94,7 +99,7 @@
             <property name="can_focus">False</property>
             <property name="homogeneous">True</property>
             <child>
-              <object class="GtkLabel" id="label3">
+              <object class="GtkLabel" id="label1">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">&lt;b&gt;Período:&lt;/b&gt;</property>
@@ -107,22 +112,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="lbl_dt_ini">
+              <object class="GtkLabel" id="label3">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">False</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="label4">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label">&lt;b&gt;à&lt;/b&gt;</property>
+                <property name="label" translatable="yes">&lt;b&gt;à&lt;/b&gt;</property>
                 <property name="use_markup">True</property>
+                <property name="justify">center</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -131,14 +126,27 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="lbl_dt_fim">
+              <object class="GtkHBox" id="hbox_ini">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
+                <property name="spacing">12</property>
               </object>
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">False</property>
                 <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkHBox" id="hbox_fim">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="spacing">12</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">4</property>
               </packing>
             </child>
             <child>
@@ -206,7 +214,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-		<signal name="clicked" handler="on_cancel_button_clicked" swapped="no"/>
+                <signal name="clicked" handler="on_cancel_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
