@@ -1410,7 +1410,6 @@
                 <property name="use_underline">True</property>
                 <property name="stock_id">gtk-print</property>
                 <property name="label" >Relatórios</property>
-                <signal name="clicked" handler="on_perfil_usuario_clicked"/>
               </object>
               <packing>
                 <property name="expand">False</property>
