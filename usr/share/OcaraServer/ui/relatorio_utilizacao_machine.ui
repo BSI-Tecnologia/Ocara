@@ -23,8 +23,22 @@
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
+              <object class="GtkTable" id="table2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
               <object class="GtkButton" id="cancel_bnt">
-                <property name="label">Fechar</property>
+                <property name="label" translatable="yes">Fechar</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
@@ -33,7 +47,7 @@
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">False</property>
-                <property name="position">0</property>
+                <property name="position">1</property>
               </packing>
             </child>
           </object>
@@ -192,7 +206,7 @@
       </object>
     </child>
     <action-widgets>
-      <action-widget response="0">cancel_bnt</action-widget>
+      <action-widget response="-5">cancel_bnt</action-widget>
     </action-widgets>
   </object>
 </interface>
