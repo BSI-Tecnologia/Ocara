@@ -181,3 +181,4 @@ INSERT INTO perfil_action (action_id, perfil_id) VALUES (57, 1);
 CREATE LANGUAGE plpgsql;
 ALTER TABLE history ADD COLUMN deletado boolean;
 CREATE OR REPLACE FUNCTION onpay_debts_machine() RETURNS trigger AS 'BEGIN UPDATE history SET deletado = TRUE WHERE day=OLD.day AND month=OLD.month AND year=OLD.year AND machine_id=OLD.machine_id AND start_time=OLD.start_time AND user_id=OLD.user_id; RETURN OLD; END;' LANGUAGE plpgsql;
+CREATE TRIGGER onpay_debts_machine BEFORE DELETE ON opendebts_machine FOR EACH ROW EXECUTE PROCEDURE onpay_debts_machine();
