@@ -209,11 +209,11 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkCheckButton" id="chk_inf_login">
-                        <property name="label" translatable="yes">Ativado</property>
+                      <object class="GtkCheckButton" id="inf_login">
+                        <property name="label" translatable="yes">Desativado</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="receives_default">False</property>
+                        <property name="receives_default">True</property>
                         <property name="draw_indicator">True</property>
                         <signal name="toggled" handler="info_login_bnt_toggled" swapped="no"/>
                       </object>

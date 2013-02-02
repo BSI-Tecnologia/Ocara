@@ -181,8 +181,7 @@
           <object class="GtkLabel" id="lbl_info">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Primeiro login utilize usuário: gerente / senha: 123
-e desabilite no menu Preferências.</property>
+            <property name="label" translatable="yes"></property>
             <property name="use_markup">True</property>
             <property name="justify">right</property>
           </object>
