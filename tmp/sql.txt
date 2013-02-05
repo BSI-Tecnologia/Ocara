@@ -99,10 +99,10 @@ SELECT pg_catalog.setval('perfil_id_seq', 3, true);
 ALTER TABLE perfil ALTER COLUMN id SET DEFAULT nextval('perfil_id_seq'::regclass);
 INSERT INTO perfil (id, perfil_description) VALUES (2, 'Monitor');
 INSERT INTO perfil (id, perfil_description) VALUES (3, 'Frequentador');
-INSERT INTO perfil (id, perfil_description) VALUES (1, 'Gerente');
+INSERT INTO perfil (id, perfil_description) VALUES (1, 'Gestor');
 ALTER TABLE ONLY perfil ADD CONSTRAINT perfil_pkey PRIMARY KEY (id);
 --
-INSERT INTO "user" (nick, full_name, email, responsible, cpf, birth, marital_status, phone, notes, schooling, curriculo, last_login, last_machine_id, active, reg_date, login_count, sex, occupation, situation_occupation, type_deficiency, renda_familiar, etnia, credit, password, category_id, alterado, logado, "autorizoEnvio") VALUES ('gerente', 'Usuário com todas as permissões', NULL, NULL, NULL, '2012-11-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, true, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '202cb962ac59075b964b07152d234b70', NULL, true, false, false);
+INSERT INTO "user" (nick, full_name, email, responsible, cpf, birth, marital_status, phone, notes, schooling, curriculo, last_login, last_machine_id, active, reg_date, login_count, sex, occupation, situation_occupation, type_deficiency, renda_familiar, etnia, credit, password, category_id, alterado, logado, "autorizoEnvio") VALUES ('gestor', 'Usuário com todas as permissões', NULL, NULL, NULL, '2012-11-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, true, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '202cb962ac59075b964b07152d234b70', NULL, true, false, false);
 --
 CREATE TABLE perfil_user ( id integer NOT NULL, user_id integer, perfil_id integer );
 ALTER TABLE public.perfil_user OWNER TO ocara;
@@ -111,7 +111,7 @@ ALTER TABLE public.perfil_user_id_seq OWNER TO ocara;
 ALTER SEQUENCE perfil_user_id_seq OWNED BY perfil_user.id;
 SELECT pg_catalog.setval('perfil_user_id_seq', 74, true);
 ALTER TABLE perfil_user ALTER COLUMN id SET DEFAULT nextval('perfil_user_id_seq'::regclass);
-INSERT INTO perfil_user (user_id, perfil_id) VALUES ((select id from public.user where nick = 'gerente'), 1);
+INSERT INTO perfil_user (user_id, perfil_id) VALUES ((select id from public.user where nick = 'gestor'), 1);
 ALTER TABLE ONLY perfil_user ADD CONSTRAINT perfil_user_pkey PRIMARY KEY (id);
 ALTER TABLE ONLY perfil_user ADD CONSTRAINT perfil_user_perfil_id_fkey FOREIGN KEY (perfil_id) REFERENCES perfil(id);
 ALTER TABLE ONLY perfil_user ADD CONSTRAINT perfil_user_user_id_fkey FOREIGN KEY (user_id) REFERENCES "user"(id);
